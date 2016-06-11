@@ -44,6 +44,4 @@ dinners = {'tuna melt'                      : ['tuna in water',
 dinner_tonight = random.choice(list(dinners))
 dinner_ingredient = dinners[dinner_tonight]
 print ('Tonight\'s dinner is:' ,dinner_tonight, '\n')
-print ('Please gather the following ingredients:\n'+'\n'.join(dinner_ingredient))
-
-
+print ('Please gather the following ingredients:\n'+'----------------------------------------\n'+'\n'.join(dinner_ingredient))
