@@ -43,5 +43,8 @@ dinners = {'tuna melt'                      : ['tuna in water',
 
 dinner_tonight = random.choice(list(dinners))
 dinner_ingredient = dinners[dinner_tonight]
-print ('Tonight\'s dinner is:' ,dinner_tonight, '\n')
-print ('Please gather the following ingredients:\n'+'----------------------------------------\n'+'\n'.join(dinner_ingredient))
+banner = len(dinner_tonight)
+banner1 = len('tonight\'s dinner is')
+total_banner_len = banner + banner1 + 1
+print ('*'*total_banner_len + '\nTonight\'s dinner is' ,dinner_tonight + '\n' + '*' * total_banner_len + '\n')
+print ('Please gather the following ingredients:\n'+'-' * 40 + '\n' +'\n'.join(dinner_ingredient))
