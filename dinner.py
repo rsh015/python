@@ -25,10 +25,25 @@ dinners = {'tuna melt'                      : ['tuna in water',
                                                'onion',
                                                'baby spinach',
                                                'shrimp',
-                                               'snow peas']                     
-          }                       
+                                               'snow peas'],
+
+           'Seared Shrimp With Chard'       : ['shrimp',
+                                               'kosher salt',
+                                               'chard',
+                                               'extra virgin olive oil',
+                                               'garlic',
+                                               'red chile',
+                                               'shallot',
+                                               'grated ginger',
+                                               'light brown sugar',
+                                               'black pepper',
+                                               'sherry vinegar',
+                                               'cilantro']
+          }
 
 dinner_tonight = random.choice(list(dinners))
 dinner_ingredient = dinners[dinner_tonight]
 print ('Tonight\'s dinner is:' ,dinner_tonight, '\n')
 print ('Please gather the following ingredients:\n'+'\n'.join(dinner_ingredient))
+
+
