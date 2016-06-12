@@ -60,7 +60,7 @@ banner = len(dinner_tonight)
 banner1 = len('tonight\'s dinner is')
 total_banner_len = banner + banner1 + 1
 print ('*'*total_banner_len + '\nTonight\'s dinner is' ,dinner_tonight + '\n' + '*' * total_banner_len + '\n')
-#print ('Please gather the following ingredients:\n' + '\n' +'\n'.join(dinner_ingredient))
 print ('Please gather the following ingredients:\n')
 for i in list(range(1,size+1)):
-    print(str(i) + '. ' + dinner_ingredient[i-1])
+    print('{:>2}'.format(str(i)) + '. ' + dinner_ingredient[i-1])
+    #'{:>0}'.format('test')
