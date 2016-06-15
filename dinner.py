@@ -64,9 +64,24 @@ size = len(dinner_ingredient)
 banner = len(dinner_tonight)
 banner1 = len('tonight\'s dinner is')
 total_banner_len = banner + banner1 + 1
-print ('*'*total_banner_len + '\nTonight\'s dinner is' ,dinner_tonight + '\n' + '*' * total_banner_len + '\n')
+print ('*'*total_banner_len, '\n' 'Tonight\'s dinner is' ,dinner_tonight, '\n' + '*' * total_banner_len, '\n')
+
+#Open a new file for writing header
+text_file = open('dinner.txt', 'w')
+header = ['*'*total_banner_len, '\n',
+          'Tonight\'s dinner is %s\n' %dinner_tonight,
+          '*'*total_banner_len,'\n\n']
+text_file.writelines(header)
+text_file.close()
 
 #List out the ingredients of the randomly chosen dinner
 print ('Please gather the following ingredients:\n')
 for i in list(range(1,size+1)):
     print('{:>2}'.format(str(i)) + '. ' + dinner_ingredient[i-1])
+
+#Append the list of ingredients to dinner.txt file created above
+text_file = open('dinner.txt', 'a')
+text_file.write('Please gather the following ingredients:\n\n')
+for i in list(range(1,size+1)):
+    text_file.write('{:>2}'.format(str(i)) + '. ' + dinner_ingredient[i-1] + '\n')
+text_file.close()
